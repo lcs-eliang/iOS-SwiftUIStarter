@@ -11,8 +11,10 @@
 		99EE6A122718642B00B0F613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A112718642B00B0F613 /* ContentView.swift */; };
 		99EE6A142718643200B0F613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE6A132718643200B0F613 /* Assets.xcassets */; };
 		99EE6A172718643200B0F613 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE6A162718643200B0F613 /* Preview Assets.xcassets */; };
-		99EE6A1E2718645A00B0F613 /* Feature in Resources */ = {isa = PBXBuildFile; fileRef = 99EE6A1D2718645A00B0F613 /* Feature */; };
-		99EE6A202718646800B0F613 /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 99EE6A1F2718646800B0F613 /* Constants */; };
+		99EE6A2E271865C500B0F613 /* QuotesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A2B271865C500B0F613 /* QuotesScreen.swift */; };
+		99EE6A2F271865C500B0F613 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A2D271865C500B0F613 /* Quote.swift */; };
+		99EE6A32271865D600B0F613 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A31271865D600B0F613 /* APIConstants.swift */; };
+		99EE6A352718679C00B0F613 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE6A342718679C00B0F613 /* QuoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +23,10 @@
 		99EE6A112718642B00B0F613 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99EE6A132718643200B0F613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EE6A162718643200B0F613 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		99EE6A1D2718645A00B0F613 /* Feature */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Feature; sourceTree = "<group>"; };
-		99EE6A1F2718646800B0F613 /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
+		99EE6A2B271865C500B0F613 /* QuotesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesScreen.swift; sourceTree = "<group>"; };
+		99EE6A2D271865C500B0F613 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		99EE6A31271865D600B0F613 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		99EE6A342718679C00B0F613 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteView.swift; path = ../../../../../QuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 		99EE6A032718642B00B0F613 = {
 			isa = PBXGroup;
 			children = (
+				99EE6A0F2718642B00B0F613 /* SwiftUI_StarterApp.swift */,
 				99EE6A0E2718642B00B0F613 /* SwiftUI Starter */,
 				99EE6A0D2718642B00B0F613 /* Products */,
 			);
@@ -55,9 +60,8 @@
 		99EE6A0E2718642B00B0F613 /* SwiftUI Starter */ = {
 			isa = PBXGroup;
 			children = (
-				99EE6A1F2718646800B0F613 /* Constants */,
-				99EE6A1D2718645A00B0F613 /* Feature */,
-				99EE6A0F2718642B00B0F613 /* SwiftUI_StarterApp.swift */,
+				99EE6A30271865D600B0F613 /* Constants */,
+				99EE6A28271865C500B0F613 /* Feature */,
 				99EE6A112718642B00B0F613 /* ContentView.swift */,
 				99EE6A132718643200B0F613 /* Assets.xcassets */,
 				99EE6A152718643200B0F613 /* Preview Content */,
@@ -71,6 +75,56 @@
 				99EE6A162718643200B0F613 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99EE6A28271865C500B0F613 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A29271865C500B0F613 /* Quotes */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		99EE6A29271865C500B0F613 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A332718675A00B0F613 /* View */,
+				99EE6A2A271865C500B0F613 /* Screen */,
+				99EE6A2C271865C500B0F613 /* Model */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		99EE6A2A271865C500B0F613 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A2B271865C500B0F613 /* QuotesScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		99EE6A2C271865C500B0F613 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A2D271865C500B0F613 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99EE6A30271865D600B0F613 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A31271865D600B0F613 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		99EE6A332718675A00B0F613 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99EE6A342718679C00B0F613 /* QuoteView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99EE6A1E2718645A00B0F613 /* Feature in Resources */,
 				99EE6A172718643200B0F613 /* Preview Assets.xcassets in Resources */,
-				99EE6A202718646800B0F613 /* Constants in Resources */,
 				99EE6A142718643200B0F613 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EE6A2F271865C500B0F613 /* Quote.swift in Sources */,
+				99EE6A352718679C00B0F613 /* QuoteView.swift in Sources */,
+				99EE6A32271865D600B0F613 /* APIConstants.swift in Sources */,
+				99EE6A2E271865C500B0F613 /* QuotesScreen.swift in Sources */,
 				99EE6A122718642B00B0F613 /* ContentView.swift in Sources */,
 				99EE6A102718642B00B0F613 /* SwiftUI_StarterApp.swift in Sources */,
 			);
