@@ -14,9 +14,16 @@ struct QuotesScreen: View {
     )
     
     var body: some View {
-        List {
-            ForEach(Quote.dummyData, id: \.anime) {
-                item in QuoteView(item: item)
+        
+        Group {
+            if vm.quotes.isEmpty {
+                LoadingView(text: "Fetchng Quotes")
+            } else {
+                List {
+                    ForEach(vm.quotes, id: \.anime) { item in
+                        QuoteView(item: item)
+                    }
+                }
             }
         }
         .task {
